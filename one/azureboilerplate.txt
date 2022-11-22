@@ -1,0 +1,27 @@
+# Provider Block
+terraform {
+  #TF Cloud Integration
+  cloud {
+    organization = ""
+    workspaces {
+      name = ""
+    }
+  }
+
+  #Azure Provider Configuration
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+    subscription_id = "524f77db-2d08-4249-b27d-96ea3960d824"
+    tenant_id = "7a746742-7931-4f5d-8af3-d2bf6fbb3a15"
+    client_id = "08d0ab17-974c-4703-997d-19c4148b9b35"
+    client_secret = "p-W8Q~xvPg7St_i-bV8wCVVsVESbbyrky8ezFbge"
+}
